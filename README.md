@@ -4,7 +4,7 @@ A lightweight Python tool for parsing, translating, and analyzing FIX (Financial
 
 I'm using this project to explore the FIX protocol, understand common trading message flows, and provide tools for inspecting FIX session logs.
 
-Resources Used:
+**Resources Used:**
 - [FIX Repository](https://fixtrading.org/fix-repository/)
 - [FIXimate](https://fiximate.fixtrading.org/)
 
