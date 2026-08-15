@@ -1,9 +1,9 @@
 import json
 
 def translateLog(log_path):
-    with open(r'data\fix_fields.json', 'r') as file:
+    with open(r'.\data\fix_fields.json', 'r') as file:
         fields = json.load(file)
-    with open(r'data\fix_enums.json', 'r') as file:
+    with open(r'.\data\fix_enums.json', 'r') as file:
         enums = json.load(file)
     with open(log_path, 'r') as file:
         logs = json.load(file)
@@ -29,11 +29,13 @@ def translateLog(log_path):
             
         translated[log] = data
     return translated
+
+
 def main():
-    log_path = r'data\log.json'
+    log_path = r'.\data\log.json'
     data = translateLog(log_path)
 
-    with open(r"data\log_translated.json", "w") as file:
+    with open(r".\data\log_translated.json", "w") as file:
             json.dump(data, file)
             
 if __name__ == "__main__":

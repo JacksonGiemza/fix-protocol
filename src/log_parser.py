@@ -34,10 +34,11 @@ def parseLog(PATH):
     return data
 
 def main():
-    log_path = "fix_log1.txt"
+    log_path = r".\data\fix_log1.txt"
+
     data = parseLog(log_path)
     
-    with open(r"data\log.json", "w") as file:
+    with open(r".\data\log.json", "w") as file:
         json.dump(data, file)
 
 if __name__ == "__main__":
