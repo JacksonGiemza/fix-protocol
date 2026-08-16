@@ -10,9 +10,9 @@ def translateLog(log_path):
 
     translated = {}
     for log in logs:
-        body = logs[log]['body']
+        message = logs[log]['head'] + logs[log]['body'] + logs[log]['tail']
         data = {}
-        for tag in body:
+        for tag in message:
             tag = tag.split('=')
             values = {
                     "tag": tag[0],
@@ -27,14 +27,14 @@ def translateLog(log_path):
             if tag[0] in fields:
                 data[fields[tag[0]]['Name']] = values
             
-        translated[log] = data
+        translated[log] = {'raw': logs[log]['raw'],
+                           'fields': data}
     return translated
 
 
 def main():
     log_path = r'.\data\log.json'
     data = translateLog(log_path)
-
     with open(r".\data\log_translated.json", "w") as file:
             json.dump(data, file)
             

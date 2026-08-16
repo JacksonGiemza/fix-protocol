@@ -6,8 +6,7 @@ def fieldsToDict(root):
     for field in root.findall('Field'):
         tag_id = field.find('Tag').text
 
-        tag_data = {
-        }
+        tag_data = {}
         for elem in field.iter():
             if elem.tag == 'Tag' or elem.tag == 'Field':
                 continue

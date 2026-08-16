@@ -1,11 +1,10 @@
-import pandas as pd
 import json
-
 
 def parseLog(PATH):
     with open(PATH, "r", encoding="utf-8") as file:
         log = file.read()
 
+    raw = log.split()
     log = log.split('')
 
     curr = ''
@@ -28,7 +27,7 @@ def parseLog(PATH):
             curr = 'tail'
 
         if i not in data:
-            data[i] = {'head': [], 'body': [], 'tail': []}
+            data[i] = {'head': [], 'body': [], 'tail': [], 'raw': raw[i]}
 
         data[i][curr].append(element)
     return data

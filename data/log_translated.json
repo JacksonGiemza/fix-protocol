@@ -1,131 +1,179 @@
 {
   "0": {
-    "MsgType": { "tag": "35", "raw": "A", "value": "Logon" },
-    "MsgSeqNum": { "tag": "34", "raw": "1092" },
-    "SenderCompID": { "tag": "49", "raw": "TESTBUY1" },
-    "SendingTime": { "tag": "52", "raw": "20180920-18:24:59.643" },
-    "TargetCompID": { "tag": "56", "raw": "TESTSELL1" },
-    "EncryptMethod": { "tag": "98", "raw": "0", "value": "None" },
-    "HeartBtInt": { "tag": "108", "raw": "60" }
+    "raw": "8=FIX.4.4\u00019=75\u000135=A\u000134=1092\u000149=TESTBUY1\u000152=20180920-18:24:59.643\u000156=TESTSELL1\u000198=0\u0001108=60\u000110=178\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.4" },
+      "BodyLength": { "tag": "9", "raw": "75" },
+      "MsgType": { "tag": "35", "raw": "A", "value": "Logon" },
+      "MsgSeqNum": { "tag": "34", "raw": "1092" },
+      "SenderCompID": { "tag": "49", "raw": "TESTBUY1" },
+      "SendingTime": { "tag": "52", "raw": "20180920-18:24:59.643" },
+      "TargetCompID": { "tag": "56", "raw": "TESTSELL1" },
+      "EncryptMethod": { "tag": "98", "raw": "0", "value": "None" },
+      "HeartBtInt": { "tag": "108", "raw": "60" },
+      "CheckSum": { "tag": "10", "raw": "178" }
+    }
   },
   "1": {
-    "MsgType": { "tag": "35", "raw": "D", "value": "NewOrderSingle" },
-    "MsgSeqNum": { "tag": "34", "raw": "1080" },
-    "SenderCompID": { "tag": "49", "raw": "TESTBUY1" },
-    "SendingTime": { "tag": "52", "raw": "20180920-18:14:19.508" },
-    "TargetCompID": { "tag": "56", "raw": "TESTSELL1" },
-    "ClOrdID": { "tag": "11", "raw": "636730640278898634" },
-    "Currency": { "tag": "15", "raw": "USD" },
-    "HandlInst": {
-      "tag": "21",
-      "raw": "2",
-      "value": "AutomatedExecutionInterventionOK"
-    },
-    "OrderQty": { "tag": "38", "raw": "7000" },
-    "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
-    "Side": { "tag": "54", "raw": "1", "value": "Buy" },
-    "Symbol": { "tag": "55", "raw": "MSFT" },
-    "TransactTime": { "tag": "60", "raw": "20180920-18:14:19.492" }
+    "raw": "8=FIX.4.4\u00019=148\u000135=D\u000134=1080\u000149=TESTBUY1\u000152=20180920-18:14:19.508\u000156=TESTSELL1\u000111=636730640278898634\u000115=USD\u000121=2\u000138=7000\u000140=1\u000154=1\u000155=MSFT\u000160=20180920-18:14:19.492\u000110=092\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.4" },
+      "BodyLength": { "tag": "9", "raw": "148" },
+      "MsgType": { "tag": "35", "raw": "D", "value": "NewOrderSingle" },
+      "MsgSeqNum": { "tag": "34", "raw": "1080" },
+      "SenderCompID": { "tag": "49", "raw": "TESTBUY1" },
+      "SendingTime": { "tag": "52", "raw": "20180920-18:14:19.508" },
+      "TargetCompID": { "tag": "56", "raw": "TESTSELL1" },
+      "ClOrdID": { "tag": "11", "raw": "636730640278898634" },
+      "Currency": { "tag": "15", "raw": "USD" },
+      "HandlInst": {
+        "tag": "21",
+        "raw": "2",
+        "value": "AutomatedExecutionInterventionOK"
+      },
+      "OrderQty": { "tag": "38", "raw": "7000" },
+      "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
+      "Side": { "tag": "54", "raw": "1", "value": "Buy" },
+      "Symbol": { "tag": "55", "raw": "MSFT" },
+      "TransactTime": { "tag": "60", "raw": "20180920-18:14:19.492" },
+      "CheckSum": { "tag": "10", "raw": "092" }
+    }
   },
   "2": {
-    "MsgType": { "tag": "35", "raw": "8", "value": "ExecutionReport" },
-    "MsgSeqNum": { "tag": "34", "raw": "1090" },
-    "SenderCompID": { "tag": "49", "raw": "TESTSELL1" },
-    "SendingTime": { "tag": "52", "raw": "20180920-18:23:53.671" },
-    "TargetCompID": { "tag": "56", "raw": "TESTBUY1" },
-    "AvgPx": { "tag": "6", "raw": "113.35" },
-    "ClOrdID": { "tag": "11", "raw": "636730640278898634" },
-    "CumQty": { "tag": "14", "raw": "3500.0000000000" },
-    "Currency": { "tag": "15", "raw": "USD" },
-    "ExecID": { "tag": "17", "raw": "20636730646335310000" },
-    "HandlInst": {
-      "tag": "21",
-      "raw": "2",
-      "value": "AutomatedExecutionInterventionOK"
-    },
-    "LastPx": { "tag": "31", "raw": "113.35" },
-    "LastQty": { "tag": "32", "raw": "3500" },
-    "OrderID": { "tag": "37", "raw": "20636730646335310000" },
-    "OrderQty": { "tag": "38", "raw": "7000" },
-    "OrdStatus": { "tag": "39", "raw": "1", "value": "PartiallyFilled" },
-    "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
-    "Side": { "tag": "54", "raw": "1", "value": "Buy" },
-    "Symbol": { "tag": "55", "raw": "MSFT" },
-    "TransactTime": { "tag": "60", "raw": "20180920-18:23:53.531" },
-    "ExecType": { "tag": "150", "raw": "F", "value": "Trade" },
-    "LeavesQty": { "tag": "151", "raw": "3500" },
-    "NoPartyIDs": { "tag": "453", "raw": "1" },
-    "PartyID": { "tag": "448", "raw": "BRK2" },
-    "PartyIDSource": { "tag": "447", "raw": "D", "value": "Proprietary" },
-    "PartyRole": { "tag": "452", "raw": "1", "value": "ExecutingFirm" }
+    "raw": "8=FIX.4.4\u00019=289\u000135=8\u000134=1090\u000149=TESTSELL1\u000152=20180920-18:23:53.671\u000156=TESTBUY1\u00016=113.35\u000111=636730640278898634\u000114=3500.0000000000\u000115=USD\u000117=20636730646335310000\u000121=2\u000131=113.35\u000132=3500\u000137=20636730646335310000\u000138=7000\u000139=1\u000140=1\u000154=1\u000155=MSFT\u000160=20180920-18:23:53.531\u0001150=F\u0001151=3500\u0001453=1\u0001448=BRK2\u0001447=D\u0001452=1\u000110=151\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.4" },
+      "BodyLength": { "tag": "9", "raw": "289" },
+      "MsgType": { "tag": "35", "raw": "8", "value": "ExecutionReport" },
+      "MsgSeqNum": { "tag": "34", "raw": "1090" },
+      "SenderCompID": { "tag": "49", "raw": "TESTSELL1" },
+      "SendingTime": { "tag": "52", "raw": "20180920-18:23:53.671" },
+      "TargetCompID": { "tag": "56", "raw": "TESTBUY1" },
+      "AvgPx": { "tag": "6", "raw": "113.35" },
+      "ClOrdID": { "tag": "11", "raw": "636730640278898634" },
+      "CumQty": { "tag": "14", "raw": "3500.0000000000" },
+      "Currency": { "tag": "15", "raw": "USD" },
+      "ExecID": { "tag": "17", "raw": "20636730646335310000" },
+      "HandlInst": {
+        "tag": "21",
+        "raw": "2",
+        "value": "AutomatedExecutionInterventionOK"
+      },
+      "LastPx": { "tag": "31", "raw": "113.35" },
+      "LastQty": { "tag": "32", "raw": "3500" },
+      "OrderID": { "tag": "37", "raw": "20636730646335310000" },
+      "OrderQty": { "tag": "38", "raw": "7000" },
+      "OrdStatus": { "tag": "39", "raw": "1", "value": "PartiallyFilled" },
+      "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
+      "Side": { "tag": "54", "raw": "1", "value": "Buy" },
+      "Symbol": { "tag": "55", "raw": "MSFT" },
+      "TransactTime": { "tag": "60", "raw": "20180920-18:23:53.531" },
+      "ExecType": { "tag": "150", "raw": "F", "value": "Trade" },
+      "LeavesQty": { "tag": "151", "raw": "3500" },
+      "NoPartyIDs": { "tag": "453", "raw": "1" },
+      "PartyID": { "tag": "448", "raw": "BRK2" },
+      "PartyIDSource": { "tag": "447", "raw": "D", "value": "Proprietary" },
+      "PartyRole": { "tag": "452", "raw": "1", "value": "ExecutingFirm" },
+      "CheckSum": { "tag": "10", "raw": "151" }
+    }
   },
   "3": {
-    "MsgType": { "tag": "35", "raw": "5", "value": "Logout" },
-    "MsgSeqNum": { "tag": "34", "raw": "1091" },
-    "SenderCompID": { "tag": "49", "raw": "TESTBUY1" },
-    "SendingTime": { "tag": "52", "raw": "20180920-18:24:58.675" },
-    "TargetCompID": { "tag": "56", "raw": "TESTSELL1" }
+    "raw": "8=FIX.4.4\u00019=63\u000135=5\u000134=1091\u000149=TESTBUY1\u000152=20180920-18:24:58.675\u000156=TESTSELL1\u000110=138\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.4" },
+      "BodyLength": { "tag": "9", "raw": "63" },
+      "MsgType": { "tag": "35", "raw": "5", "value": "Logout" },
+      "MsgSeqNum": { "tag": "34", "raw": "1091" },
+      "SenderCompID": { "tag": "49", "raw": "TESTBUY1" },
+      "SendingTime": { "tag": "52", "raw": "20180920-18:24:58.675" },
+      "TargetCompID": { "tag": "56", "raw": "TESTSELL1" },
+      "CheckSum": { "tag": "10", "raw": "138" }
+    }
   },
   "4": {
-    "MsgType": { "tag": "35", "raw": "A", "value": "Logon" },
-    "MsgSeqNum": { "tag": "34", "raw": "978" },
-    "SenderCompID": { "tag": "49", "raw": "TESTSELL3" },
-    "SendingTime": { "tag": "52", "raw": "20190206-16:29:19.208" },
-    "TargetCompID": { "tag": "56", "raw": "TESTBUY3" },
-    "EncryptMethod": { "tag": "98", "raw": "0", "value": "None" },
-    "HeartBtInt": { "tag": "108", "raw": "60" }
+    "raw": "8=FIX.4.2\u00019=74\u000135=A\u000134=978\u000149=TESTSELL3\u000152=20190206-16:29:19.208\u000156=TESTBUY3\u000198=0\u0001108=60\u000110=137\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.2" },
+      "BodyLength": { "tag": "9", "raw": "74" },
+      "MsgType": { "tag": "35", "raw": "A", "value": "Logon" },
+      "MsgSeqNum": { "tag": "34", "raw": "978" },
+      "SenderCompID": { "tag": "49", "raw": "TESTSELL3" },
+      "SendingTime": { "tag": "52", "raw": "20190206-16:29:19.208" },
+      "TargetCompID": { "tag": "56", "raw": "TESTBUY3" },
+      "EncryptMethod": { "tag": "98", "raw": "0", "value": "None" },
+      "HeartBtInt": { "tag": "108", "raw": "60" },
+      "CheckSum": { "tag": "10", "raw": "137" }
+    }
   },
   "5": {
-    "MsgType": { "tag": "35", "raw": "D", "value": "NewOrderSingle" },
-    "MsgSeqNum": { "tag": "34", "raw": "972" },
-    "SenderCompID": { "tag": "49", "raw": "TESTBUY3" },
-    "SendingTime": { "tag": "52", "raw": "20190206-16:25:10.403" },
-    "TargetCompID": { "tag": "56", "raw": "TESTSELL3" },
-    "ClOrdID": { "tag": "11", "raw": "141636850670842269979" },
-    "HandlInst": {
-      "tag": "21",
-      "raw": "2",
-      "value": "AutomatedExecutionInterventionOK"
-    },
-    "OrderQty": { "tag": "38", "raw": "100" },
-    "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
-    "Side": { "tag": "54", "raw": "1", "value": "Buy" },
-    "Symbol": { "tag": "55", "raw": "AAPL" },
-    "TransactTime": { "tag": "60", "raw": "20190206-16:25:08.968" },
-    "SecurityExchange": { "tag": "207", "raw": "TO" }
+    "raw": "8=FIX.4.2\u00019=163\u000135=D\u000134=972\u000149=TESTBUY3\u000152=20190206-16:25:10.403\u000156=TESTSELL3\u000111=141636850670842269979\u000121=2\u000138=100\u000140=1\u000154=1\u000155=AAPL\u000160=20190206-16:25:08.968\u0001207=TO\u00016000=TEST1234\u000110=106\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.2" },
+      "BodyLength": { "tag": "9", "raw": "163" },
+      "MsgType": { "tag": "35", "raw": "D", "value": "NewOrderSingle" },
+      "MsgSeqNum": { "tag": "34", "raw": "972" },
+      "SenderCompID": { "tag": "49", "raw": "TESTBUY3" },
+      "SendingTime": { "tag": "52", "raw": "20190206-16:25:10.403" },
+      "TargetCompID": { "tag": "56", "raw": "TESTSELL3" },
+      "ClOrdID": { "tag": "11", "raw": "141636850670842269979" },
+      "HandlInst": {
+        "tag": "21",
+        "raw": "2",
+        "value": "AutomatedExecutionInterventionOK"
+      },
+      "OrderQty": { "tag": "38", "raw": "100" },
+      "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
+      "Side": { "tag": "54", "raw": "1", "value": "Buy" },
+      "Symbol": { "tag": "55", "raw": "AAPL" },
+      "TransactTime": { "tag": "60", "raw": "20190206-16:25:08.968" },
+      "SecurityExchange": { "tag": "207", "raw": "TO" },
+      "CheckSum": { "tag": "10", "raw": "106" }
+    }
   },
   "6": {
-    "MsgType": { "tag": "35", "raw": "8", "value": "ExecutionReport" },
-    "MsgSeqNum": { "tag": "34", "raw": "974" },
-    "SenderCompID": { "tag": "49", "raw": "TESTSELL3" },
-    "SendingTime": { "tag": "52", "raw": "20190206-16:26:09.059" },
-    "TargetCompID": { "tag": "56", "raw": "TESTBUY3" },
-    "AvgPx": { "tag": "6", "raw": "174.51" },
-    "ClOrdID": { "tag": "11", "raw": "141636850670842269979" },
-    "CumQty": { "tag": "14", "raw": "100.0000000000" },
-    "ExecID": { "tag": "17", "raw": "3636850671684357979" },
-    "HandlInst": {
-      "tag": "21",
-      "raw": "2",
-      "value": "AutomatedExecutionInterventionOK"
-    },
-    "LastPx": { "tag": "31", "raw": "174.51" },
-    "LastQty": { "tag": "32", "raw": "100.0000000000" },
-    "OrderID": { "tag": "37", "raw": "1005448" },
-    "OrderQty": { "tag": "38", "raw": "100" },
-    "OrdStatus": { "tag": "39", "raw": "2", "value": "Filled" },
-    "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
-    "Side": { "tag": "54", "raw": "1", "value": "Buy" },
-    "Symbol": { "tag": "55", "raw": "AAPL" },
-    "TransactTime": { "tag": "60", "raw": "20190206-16:26:08.435" },
-    "ExecType": { "tag": "150", "raw": "2", "value": null },
-    "LeavesQty": { "tag": "151", "raw": "0.0000000000" }
+    "raw": "8=FIX.4.2\u00019=271\u000135=8\u000134=974\u000149=TESTSELL3\u000152=20190206-16:26:09.059\u000156=TESTBUY3\u00016=174.51\u000111=141636850670842269979\u000114=100.0000000000\u000117=3636850671684357979\u000120=0\u000121=2\u000131=174.51\u000132=100.0000000000\u000137=1005448\u000138=100\u000139=2\u000140=1\u000154=1\u000155=AAPL\u000160=20190206-16:26:08.435\u0001150=2\u0001151=0.0000000000\u000110=194\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.2" },
+      "BodyLength": { "tag": "9", "raw": "271" },
+      "MsgType": { "tag": "35", "raw": "8", "value": "ExecutionReport" },
+      "MsgSeqNum": { "tag": "34", "raw": "974" },
+      "SenderCompID": { "tag": "49", "raw": "TESTSELL3" },
+      "SendingTime": { "tag": "52", "raw": "20190206-16:26:09.059" },
+      "TargetCompID": { "tag": "56", "raw": "TESTBUY3" },
+      "AvgPx": { "tag": "6", "raw": "174.51" },
+      "ClOrdID": { "tag": "11", "raw": "141636850670842269979" },
+      "CumQty": { "tag": "14", "raw": "100.0000000000" },
+      "ExecID": { "tag": "17", "raw": "3636850671684357979" },
+      "HandlInst": {
+        "tag": "21",
+        "raw": "2",
+        "value": "AutomatedExecutionInterventionOK"
+      },
+      "LastPx": { "tag": "31", "raw": "174.51" },
+      "LastQty": { "tag": "32", "raw": "100.0000000000" },
+      "OrderID": { "tag": "37", "raw": "1005448" },
+      "OrderQty": { "tag": "38", "raw": "100" },
+      "OrdStatus": { "tag": "39", "raw": "2", "value": "Filled" },
+      "OrdType": { "tag": "40", "raw": "1", "value": "Market" },
+      "Side": { "tag": "54", "raw": "1", "value": "Buy" },
+      "Symbol": { "tag": "55", "raw": "AAPL" },
+      "TransactTime": { "tag": "60", "raw": "20190206-16:26:08.435" },
+      "ExecType": { "tag": "150", "raw": "2", "value": null },
+      "LeavesQty": { "tag": "151", "raw": "0.0000000000" },
+      "CheckSum": { "tag": "10", "raw": "194" }
+    }
   },
   "7": {
-    "MsgType": { "tag": "35", "raw": "5", "value": "Logout" },
-    "MsgSeqNum": { "tag": "34", "raw": "977" },
-    "SenderCompID": { "tag": "49", "raw": "TESTSELL3" },
-    "SendingTime": { "tag": "52", "raw": "20190206-16:28:51.518" },
-    "TargetCompID": { "tag": "56", "raw": "TESTBUY3" }
+    "raw": "8=FIX.4.2\u00019=62\u000135=5\u000134=977\u000149=TESTSELL3\u000152=20190206-16:28:51.518\u000156=TESTBUY3\u000110=092\u0001",
+    "fields": {
+      "BeginString": { "tag": "8", "raw": "FIX.4.2" },
+      "BodyLength": { "tag": "9", "raw": "62" },
+      "MsgType": { "tag": "35", "raw": "5", "value": "Logout" },
+      "MsgSeqNum": { "tag": "34", "raw": "977" },
+      "SenderCompID": { "tag": "49", "raw": "TESTSELL3" },
+      "SendingTime": { "tag": "52", "raw": "20190206-16:28:51.518" },
+      "TargetCompID": { "tag": "56", "raw": "TESTBUY3" },
+      "CheckSum": { "tag": "10", "raw": "092" }
+    }
   }
 }
