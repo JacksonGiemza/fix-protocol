@@ -11,7 +11,7 @@ def translateLog(log_path):
     translated = {}
     for log in logs:
         message = logs[log]['head'] + logs[log]['body'] + logs[log]['tail']
-        data = {}
+        field_data = {}
         for tag in message:
             tag = tag.split('=')
             values = {
@@ -25,10 +25,10 @@ def translateLog(log_path):
                 except KeyError:
                     values['value'] = None
             if tag[0] in fields:
-                data[fields[tag[0]]['Name']] = values
+                field_data[fields[tag[0]]['Name']] = values
             
         translated[log] = {'raw': logs[log]['raw'],
-                           'fields': data}
+                           'fields': field_data}
     return translated
 
 
