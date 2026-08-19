@@ -13,17 +13,18 @@ def translateLog(log_path):
         message = logs[log]['head'] + logs[log]['body'] + logs[log]['tail']
         field_data = {}
         for tag in message:
-            tag = tag.split('=')
+            tag, raw_value = tag.split("=", 1)
+
             values = {
-                    "tag": tag[0],
-                    "raw": tag[1],
-                }
-            
-            if tag[0] in enums:
-                try:
-                    values['value'] = enums[tag[0]][tag[1]]
-                except KeyError:
-                    values['value'] = None
+                "tag": tag,
+                "raw": raw_value
+            }
+
+            translated_value = enums.get(tag, {}).get(raw_value)
+
+            if translated_value is not None:
+                values["value"] = translated_value
+
             if tag[0] in fields:
                 field_data[fields[tag[0]]['Name']] = values
             
@@ -31,7 +32,7 @@ def translateLog(log_path):
                            'fields': field_data}
     return translated
 
-
+    
 def main():
     log_path = r'.\data\log.json'
     data = translateLog(log_path)
