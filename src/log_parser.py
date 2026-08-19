@@ -50,12 +50,16 @@ def validateMessage(message):
     listed_body_length = int(head[1].split('=')[1])
     body_length = len((SOH.join(body) + SOH).encode("ascii"))
 
-    
+    listed_check_sum = int(tail[0].split('=')[1])
+    check_sum = sum(("".join(head) + SOH.join(body) + SOH).replace(r"\x01", "\x01").encode("ascii")) % 256
 
     return {
         'body_length': {'actual': body_length,
                         'listed': listed_body_length,
-                        'valid': body_length == message_body_length}
+                        'valid': body_length == listed_body_length},
+        'check_sum': {'actual': check_sum,
+                      'listed': listed_check_sum,
+                      'valid': check_sum == listed_check_sum}
     }
 
 
