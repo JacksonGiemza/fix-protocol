@@ -39,6 +39,11 @@ def parseLog(path):
 
         messages[message_index][section].append(element)
 
+        if section == "tail":
+            val_data = validateMessage(messages[message_index])
+            messages[message_index]["validation"] = val_data
+            break
+
     return messages
 
 def validateMessage(message):
@@ -59,17 +64,17 @@ def validateMessage(message):
                         'valid': body_length == listed_body_length},
         'check_sum': {'actual': check_sum,
                       'listed': listed_check_sum,
-                      'valid': check_sum == listed_check_sum}
+                      'valid': check_sum == listed_check_sum},
     }
 
 
 def main():
     log_path = r".\data\fix_log1.txt"
 
-    data = parseLog(log_path)
+    print(parseLog(log_path))
     
-    with open(r".\data\log.json", "w") as file:
-        json.dump(data, file)
+    # with open(r".\data\log.json", "w") as file:
+    #     json.dump(data, file)
 
 if __name__ == "__main__":
     main()
